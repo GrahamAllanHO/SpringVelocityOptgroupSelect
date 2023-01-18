@@ -1,0 +1,24 @@
+<HTML>
+<HEAD>
+    <TITLE>Velocity Demo Application</TITLE>
+</HEAD>
+<BODY>
+    <form>
+        <label for="vehicle">Choose a vehicle:</label>
+        <select name="Vehicle" onchange="vehicleChange(this)">
+        #foreach ($mapEntry in $selection.entrySet())
+                <optgroup label="$mapEntry.key">
+                    #foreach ($item in $mapEntry.value)
+                            <option value="$item">$item</option>
+                    #end
+        #end
+        </select>
+        <br><br>
+    </form>
+</BODY>
+<script>
+    function vehicleChange(select) {
+        alert(select.options[select.selectedIndex].text);
+    }
+</script>
+</HTML>
