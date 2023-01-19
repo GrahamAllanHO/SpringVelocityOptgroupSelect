@@ -4,8 +4,11 @@
 </HEAD>
 <BODY>
     <form action="selection" method="POST" >
-        <label for="selection">Choose a vehicle:</label>
-        <select name="selection" onchange="vehicleChange(this)">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" value="">
+        <br>
+        <label for="vehicle">Choose a vehicle:</label>
+        <select name="vehicle" onchange="vehicleChange(this)">
         #foreach ($mapEntry in $selection.entrySet())
                 <optgroup label="$mapEntry.key">
                     #foreach ($item in $mapEntry.value)

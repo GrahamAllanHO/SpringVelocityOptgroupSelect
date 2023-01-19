@@ -21,6 +21,8 @@ public class SelectionController {
     @GetMapping(value = "/selection", produces = MediaType.TEXT_HTML_VALUE)
     @ResponseBody
     public String selectionController() {
+
+        //Populate the form with data, this can be static or data driven
         VelocityContext context = new VelocityContext();
         Map<String, String[]> selection = new HashMap<>();
         selection.put("Cars", new String[] {"Volvo", "SAAB","Opel","Audi"} );
@@ -36,7 +38,7 @@ public class SelectionController {
 
     @PostMapping(value = "/selection")
     @ResponseBody
-    public String selectionControllerSubmit(@RequestBody String selection) {
+    public String selectionControllerSubmit(Selection selection) {
         System.out.println(selection);
         return selectionController();
     }
