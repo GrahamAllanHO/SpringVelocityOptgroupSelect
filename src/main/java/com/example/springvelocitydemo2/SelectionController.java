@@ -5,8 +5,8 @@ import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.Velocity;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.StringWriter;
 import java.time.LocalDateTime;
@@ -32,4 +32,13 @@ public class SelectionController {
         template.merge(context,sw );
         return sw.toString();
     }
+
+
+    @PostMapping(value = "/selection")
+    @ResponseBody
+    public String selectionControllerSubmit(@RequestBody String selection) {
+        System.out.println(selection);
+        return selectionController();
+    }
+
 }

@@ -19,6 +19,4 @@ public class VelocityConfiguration {
         p.setProperty("file.resource.loader.path", "src/main/resources/templates");
         Velocity.init(p);
     }
-
-
 }
