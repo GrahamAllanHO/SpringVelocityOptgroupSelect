@@ -20,7 +20,7 @@ public class SelectionController {
 
     @GetMapping(value = "/selection", produces = MediaType.TEXT_HTML_VALUE)
     @ResponseBody
-    public String welcomeAsHTML() {
+    public String selectionController() {
         VelocityContext context = new VelocityContext();
         Map<String, String[]> selection = new HashMap<>();
         selection.put("Cars", new String[] {"Volvo", "SAAB","Opel","Audi"} );
