@@ -16,7 +16,7 @@ public class VelocityConfiguration {
         Properties p = new Properties();
         p.setProperty("resource.loader", "file");
         p.setProperty("file.resource.loader.class", "org.apache.velocity.runtime.resource.loader.FileResourceLoader");
-        p.setProperty("file.resource.loader.path", "src/main/webapp/templates");
+        p.setProperty("file.resource.loader.path", "src/main/resources/templates");
         Velocity.init(p);
     }
 

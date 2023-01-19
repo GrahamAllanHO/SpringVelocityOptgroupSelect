@@ -13,9 +13,6 @@ public class SpringVelocityDemo2Application {
 
 
     public static void main(String[] args) {
-
-
-
         SpringApplication.run(SpringVelocityDemo2Application.class, args);
     }
 
